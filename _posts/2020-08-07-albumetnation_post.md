@@ -23,7 +23,7 @@ imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 �
 # albumentation Content
 아래는 프로젝트에서 사용된 augmentation 코드다. 기본적으로 [bboxes augmentation](https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/)와
 [migrating_from_torchvision_to_albumentations](https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/), [albumentation 소개 및 사용법](https://hoya012.github.io/blog/albumentation_tutorial/)등을 참고하여
-Anaconda 3 환경에서 코드를 작성했다. bboxes 코드의 경우에는 ![bbox format](/assets/images/bbox_format.jpg "BBoxes Format"){: .align -center}위 이미지에서 보이는 것처럼 각각 다른 서로 다른
+Anaconda 3 환경에서 코드를 작성했다. bboxes 코드의 경우에는 ![bbox format](/assets/images/bbox_format.jpg){: .align -center}위 이미지에서 보이는 것처럼 각각 다른 서로 다른
 bbox format을 가지고 있기 때문에 주의 해줘야한다. 또한 본인은 소스코드중 bbox를 denormalize(albumentation -> yolo)하는 과정에서 ![error](/assets/images/bbox_error.png "Error"){: .align -center}
 위와 같은 오류를 만났는데 소수점 연산하다가 우연찮게 발생된거라 판단해서 albumentations/augmentations/bbox_utils.py에 있는 denormalize(bbox, rows, cols) 함수를 약간 수정했다.   
 ```python
