@@ -15,9 +15,9 @@ toc: true
 효율이 좋은지에 대해 알게되어서 이를 포스팅하고자 한다.
 # Image augmentation library
 많은 Augementation 툴 중에서 albumentation를 사용한 이유는 albumentation이 numpy, Opencv(주된 이유),
-imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. ![Benchmarking](/assets/images/Benchmarking.jpg "Benchmarking results"){: .align -center}
+imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. ![Benchmarking](./assets/images/Benchmarking.jpg "Benchmarking results"){: .align -center}
 위의 표는 ImageNet의 validation set에 있는 Image 2000장을 Intel Xeon Platinum 8168 CPU(싱글코어)를 사용해서 transform을 수행한 결과이다.
-모든 라이브러리중 albumentation이 굉장히 높은 효율을 보여주고있다. 또한 ![mode](/assets/images/mode1.jpg "Spatial-level transforms"){: .align -center}
+모든 라이브러리중 albumentation이 굉장히 높은 효율을 보여주고있다. 또한 ![mode](./assets/images/mode1.jpg "Spatial-level transforms"){: .align -center}
 ![mode](/assets/images/mode2.jpg "Spatial-level transforms"){: .align -center}에 대한 표를 살펴보았을때
 많은 변형에 대해서 image augmentation 뿐만 아니라 Masks, BBoxes, Keypoints에도 augmentation을 지원하고있다.
 # albumentation Content
