@@ -16,8 +16,6 @@ toc: true
 # Image augmentation library
 많은 Augementation 툴 중에서 albumentation를 사용한 이유는 albumentation이 numpy, Opencv(주된 이유),
 imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. <img src="https://user-images.githubusercontent.com/56510688/89698413-ff7f3700-d95b-11ea-9672-bf1a1812a56c.JPG" alt="Benchmarking" align="center">
-
->
 위의 표는 ImageNet의 validation set에 있는 Image 2000장을 Intel Xeon Platinum 8168 CPU(싱글코어)를 사용해서 transform을 수행한 결과이다.
 모든 라이브러리중 albumentation이 굉장히 높은 효율을 보여주고있다. 또한 <img src="https://user-images.githubusercontent.com/56510688/89698412-fd1cdd00-d95b-11ea-89dc-a63b3483afe0.JPG" alt="mode1" align="center">
 <img src="https://user-images.githubusercontent.com/56510688/89698368-c47d0380-d95b-11ea-8e70-19d80cbb92ea.JPG" alt="mode2" align="center">에 대한 표를 살펴보았을때
