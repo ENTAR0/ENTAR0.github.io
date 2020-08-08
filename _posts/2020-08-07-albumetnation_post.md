@@ -15,7 +15,7 @@ toc: true
 효율이 좋은지에 대해 알게되어서 이를 포스팅하고자 한다.
 # Image augmentation library
 많은 Augementation 툴 중에서 albumentation를 사용한 이유는 albumentation이 numpy, Opencv(주된 이유),
-imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. <img src="https://user-images.githubusercontent.com/56510688/89698413-ff7f3700-d95b-11ea-9672-bf1a1812a56c.JPG" alt="Benchmarking" align="center">
+imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698413-ff7f3700-d95b-11ea-9672-bf1a1812a56c.JPG" alt="Benchmarking"></p>
 위의 표는 ImageNet의 validation set에 있는 Image 2000장을 Intel Xeon Platinum 8168 CPU(싱글코어)를 사용해서 transform을 수행한 결과이다.
 모든 라이브러리중 albumentation이 굉장히 높은 효율을 보여주고있다. 또한 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698412-fd1cdd00-d95b-11ea-89dc-a63b3483afe0.JPG" alt="mode1"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698368-c47d0380-d95b-11ea-8e70-19d80cbb92ea.JPG" alt="mode2"></p>에 대한 표를 살펴보았을때
@@ -23,8 +23,8 @@ imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 �
 # albumentation Content
 아래는 프로젝트에서 사용된 augmentation 코드다. 기본적으로 [bboxes augmentation](https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/)와
 [migrating_from_torchvision_to_albumentations](https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/), [albumentation 소개 및 사용법](https://hoya012.github.io/blog/albumentation_tutorial/)등을 참고하여
-Anaconda 3 환경에서 코드를 작성했다. bboxes 코드의 경우에는 <img src="https://user-images.githubusercontent.com/56510688/89698416-0148fa80-d95c-11ea-9a27-2e5fb319aefb.JPG" alt="bbox_format" align="center">위 이미지에서 보이는 것처럼 각각 다른 서로 다른
-bbox format을 가지고 있기 때문에 주의 해줘야한다. 또한 본인은 소스코드중 bbox를 denormalize(albumentation -> yolo)하는 과정에서 <img src="https://user-images.githubusercontent.com/56510688/89698417-0312be00-d95c-11ea-9f08-61e82d2977a5.PNG" alt="mode_error" align="center">
+Anaconda 3 환경에서 코드를 작성했다. bboxes 코드의 경우에는 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698416-0148fa80-d95c-11ea-9a27-2e5fb319aefb.JPG" alt="bbox_format"></p>위 이미지에서 보이는 것처럼 각각 다른 서로 다른
+bbox format을 가지고 있기 때문에 주의 해줘야한다. 또한 본인은 소스코드중 bbox를 denormalize(albumentation -> yolo)하는 과정에서 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698417-0312be00-d95c-11ea-9f08-61e82d2977a5.PNG" alt="mode_error"></p>
 위와 같은 오류를 만났는데 소수점 연산하다가 우연찮게 발생된거라 판단해서 albumentations/augmentations/bbox_utils.py에 있는 denormalize(bbox, rows, cols) 함수를 약간 수정했다.   
 ```python
 from PIL import Image
