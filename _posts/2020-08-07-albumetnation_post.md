@@ -277,6 +277,12 @@ def main():
     
 main()
 ```
+# 문제 및 해결
+1. plt 이미지 저장시 여백 문제
+2. scale 범위를 넘는 값 수정
+3.
+
+
 # Data Preprocessing & Augmentation
 추후 포스팅 예정
 # Outro
