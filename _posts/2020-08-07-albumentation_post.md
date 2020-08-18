@@ -318,7 +318,9 @@ rotate를 포함해서 augmentation을 진행하고 plt.savefig함수로 이미�
 ### 3.3. 흑색 이미지
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90479310-6f19d100-e169-11ea-8c18-a68511d54ebe.png" alt="black_image"></p>
 plt.savefig함수로 이미지 저장하는 문제를 해결하기 위해 cv2.imwrite함수를 사용하였다. 주의할 것은 cv2.imwrite는 행렬 요소의 데이터 타입이 uint8을 지원하기때문에 만약 dtype이 float32나 float64같은 소수점 타입이면 tensorflow나 numpy라이브러리에서
-dtype변형을 지원해주는 함수를 사용해 해결해야한다. 저자는 numpy라이브러리에서 지원하는 아래의 함수를 사용해 해결하였다.  
+dtype변형을 지원해주는 함수를 사용해 해결해야한다. 저자는 numpy라이브러리에서 지원하는 아래의 함수를 사용해 해결하였다.
+
+  
 ```python
 im=(im * 255).round().astype(np.uint8)
 ```  
