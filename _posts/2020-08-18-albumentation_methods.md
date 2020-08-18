@@ -14,6 +14,8 @@ albumentation을 사용해서 augmentation을 진행하는데 composition set에
 albumentation 공식 Documentation인 [albumentations.augmentations](https://albumentations.readthedocs.io/en/latest/api/augmentations.html)와
 [albumentations.augmentations.transforms source code](https://albumentations.readthedocs.io/en/latest/_modules/albumentations/augmentations/transforms.html)
 를 참고하여 작성했습니다.
+
+
 # albumentation (작성중)
 ```python
 transforms.Blur(blur_limit(int, (int, int)), always_apply=(bool), p=(float))

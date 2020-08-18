@@ -14,6 +14,8 @@ toc: true
 이번 대학교 학술제에 발표할 프로젝트를 준비하면서 Image augmentation에 대해 조사하게 되었다.
 조사를 진행하면서 Image augmentation에 사용되는 여러 라이브러리와 왜 사용되는지, 무슨 라이브러리가
 효율이 좋은지에 대해 알게되어서 이를 포스팅하고자 한다.
+
+
 # 2. Image augmentation library
 많은 Augementation 툴 중에서 albumentation를 사용한 이유는 albumentation이 numpy, Opencv(주된 이유),
 imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 때문이다. 
@@ -31,7 +33,7 @@ imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 �
 등을 참고하여 Anaconda 3 환경에서 코드를 작성했다. bboxes 코드의 경우에는 
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/89698416-0148fa80-d95c-11ea-9a27-2e5fb319aefb.JPG" alt="bbox_format"></p>
 위 이미지에서 보이는 것처럼 각각 다른 서로 다른 bbox format을 가지고 있기 때문에 주의 해줘야한다. 
-   
+
 ```python
 from PIL import Image
 import os
@@ -302,6 +304,8 @@ def main():
     
 main()
 ```
+
+
 # 3. 문제 및 해결
 ### 3.1. plt 이미지 저장시 여백 문제
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90479766-26164c80-e16a-11ea-91bc-2b5b0043e681.PNG" alt="plt_savefig_image"></p>
@@ -350,11 +354,14 @@ def load_bboxes_area(im,bboxes,num_lines):
     return area, visib
 ```
 
+
 # 4. Data Preprocessing & Augmentation
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90480859-d769b200-e16b-11ea-9b7b-7cc7a6f0b3cd.JPG" alt="conv single"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90481003-097b1400-e16c-11ea-9b20-b54d36228fc3.JPG" alt="conv multi"></p>
 VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION논문에서는 ILSVRC(training:1.3M images-1000classes, val:50K images, testing:100K images-held out label)으로 학습을 진행 시켰을때 test set과 
 train set 모두 다른 스케일을 줄시에 분류 오류가 줄어드는 경향을 보여준다고 나와있다.
 만약 albumentation에서 해당 효과를 보고 싶으면 Resize 메소드를 composition set에 포함시키면된다.
+
+
 # 5. Outro
 IPL에서 처음 수행하게된 일이였는데 배울게 많았다. 나중에 imgaug라이브러리를 사용해서 라이브러리간의 augmentation시켰을시 얼마나 차이나는지 살펴보고싶다.
