@@ -29,8 +29,9 @@ imgaug를 기반으로 최적화되어 높은 Performance를 가지고 있기 �
 
 # 3. albumentation Code
 코드는 [augmentation_tool](https://github.com/ENTAR0/ENATR0/blob/master/renewing%20augmentation.py)를 참고하면 된다. 
-<p align="center"><img src="https://user-images.githubusercontent.com/56510688/90718707-97cad380-e2ed-11ea-8f36-cdc03c394ced.png" alt="architecture></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56510688/90718707-97cad380-e2ed-11ea-8f36-cdc03c394ced.png" alt="architecture"></p> 
 이 이미지는 코드의 구조를 간략하게 소개한 것이다.
+
 [bboxes augmentation](https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/)와
 [migrating_from_torchvision_to_albumentations](https://albumentations.ai/docs/examples/migrating_from_torchvision_to_albumentations/), 
 [albumentation 소개 및 사용법](https://hoya012.github.io/blog/albumentation_tutorial/)
@@ -97,4 +98,4 @@ train set 모두 다른 스케일을 줄시에 분류 오류가 줄어드는 경
 
 
 # 6. Outro
-IPL에서 처음 수행하게된 일이였는데 배울게 많았다. 나중에 imgaug라이브러리를 사용해서 라이브러리간의 augmentation시켰을시 얼마나 차이나는지 살펴보고싶다.
+IPL에서 처음 수행하게된 일이였는데 배울게 많았다. 나중에 imgaug라이브러리를 사용해서 라이브러리간의 augmentation시켰을시 
