@@ -48,12 +48,14 @@ python=[파이썬 버젼]은 생략해도 되고  default값은 최신버젼 입
 conda create -n [가상환경 이름] python=[파이썬 버젼]
 ```
 가상환경을 처음 만들면 아무런 패키지가 없어서 기본적으로 Anaconda 3가 제공해주는 패키지를 다운 받을지 물어봅니다.
+
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90956712-fc3f8b80-e4c3-11ea-96e2-67cda6fd960f.JPG")></p>
 
 __가상환경 시작__
 
 콘다 가상환경을 활성화 하면 아래에 이미지처럼 왼쪽에 (base)였던게 (가상환경 이름)으로 바뀝니다.
 <p align="center"><img src="https://user-images.githubusercontent.com/56510688/90956714-006ba900-e4c4-11ea-8b83-477b75936234.JPG"></p>
+
 ```
 conda activate [가상환경 이름]
 ```
