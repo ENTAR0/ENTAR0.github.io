@@ -1,7 +1,7 @@
 ---
 title: albuementation method 정리
 categories:
-- Image augementation
+- Image augmentation
 last_modified_at: 2020-08-19T14:00:00+09:00
 tags:
 - Image augmentation
