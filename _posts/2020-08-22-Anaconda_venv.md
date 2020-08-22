@@ -49,7 +49,7 @@ conda create -n [가상환경 이름] python=[파이썬 버젼]
 ```
 가상환경을 처음 만들면 아무런 패키지가 없어서 기본적으로 Anaconda 3가 제공해주는 패키지를 다운 받을지 물어봅니다.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/56510688/90956712-fc3f8b80-e4c3-11ea-96e2-67cda6fd960f.JPG")></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56510688/90956712-fc3f8b80-e4c3-11ea-96e2-67cda6fd960f.JPG"></p>
 
 __가상환경 시작__
 
