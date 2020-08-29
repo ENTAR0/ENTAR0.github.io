@@ -2,7 +2,7 @@
 title: albuementation method 정리
 categories:
 - Image augmentation
-last_modified_at: 2020-08-28T14:00:00+09:00
+last_modified_at: 2020-08-29T14:00:00+09:00
 tags:
 - Image augmentation
 - albumentation
@@ -394,56 +394,55 @@ class albumentations.augmentations.transforms.RandomShadow(shadow_roi=(float, fl
 ```
 
 ### 52. Lambda
+**kyargs에 직접 transformation할 기법을 정해서 함수를 정의합니다.
 ```python
 class albumentations.augmentations.transforms.Lambda(image=(callable), mask=(callable), keypoint=(callable), bbox(callable), always_apply=(bool), p=(float))
 ```
 
 ### 53. ChannelDropout
+임의의 채널을 Drop합니다.
 ```python
 class albumentations.augmentations.transforms.ChannelDropout(channel_drop_range=(int, int), fill_value=(int, float), always_apply=(bool), p=(float))
 ```
 
 ### 54. ISONoise
+카메라 센서 노이즈를 적용합니다.
 ```python
 class albumentations.augmentations.transforms.ISONoise(color_shift(float, float), intensity=((float, float)), always_apply=(bool), p=(float))
 ```
 
 ### 55. Solarize
+임계값을 넘는 모든 화소값을 반전시킵니다.
 ```python
 class albumentations.augmentations.transforms.Solarize(threshold=((int, int) or int, or (float, float) or float), always_apply=(bool), p=(float))
 ```
 
 ### 56. Equalize
+이미지 히스토그램을 평탄화합니다.
 ```python
 class albumentations.augmentations.transforms.Equalize(mode=(str), by_channel=(bool), mask=(np.ndarrary, callable), mask_params=(list of str), always_apply=(bool), p=(float))
 ```
 
 ### 57. Posterize
+각각의 컬러 채널에 대해 num_bits만큼 감소시킵니다.
 ```python
 class albumentations.augmentations.transforms.Posterize(num_bits((int, int) or list of ints[r,g,b]), always_apply=(bool), p=(float))
 ```
 
 ### 58. Downscale
+이미지의 질을 다운스케일링을 통해 감소시킵니다.
 ```python
 class albumentations.augmentations.transforms.Downscale(scale_min=(float), scale_max=(float), interpolation=(OpenCV flag), always_apply=(bool), p=(float))
 ```
 
 ### 59. MultiplicativeNoise
+임의의 숫자 또는 배열을 이미지에 합성시킵니다.
 ```python
 class albumentations.augmentations.transforms.MultiplicativeNoise(multiplier=(float or tuple of floats), per_channel=(bool), elementwise=(bool), always_apply=(bool), p=(float))
 ```
 
 ### 60. FancyPCA
+RGB이미지를 “ImageNet Classification with Deep Convolutional Neural Networks”에서 사용한 FancyPCA기법을 통해 augmentation을 수행합니다.
 ```python
 class albumentations.augmentations.transforms.FancyPCA(alpha=(float), always_apply=(bool), p=(float))
-```
-
-### 61. MaskDropout
-```python
-class albumentations.augmentations.transforms.MaskDropout(always_apply=(bool), p=(float))
-```
-
-### 62. GridDropout
-```python
-class albumentations.augmentations.transforms.GridDropout(always_apply=(bool), p=(float))
 ```
