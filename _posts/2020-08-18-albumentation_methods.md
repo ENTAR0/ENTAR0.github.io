@@ -17,15 +17,15 @@ albumentation 공식 Documentation인 [albumentations.augmentations](https://alb
 
 
 # 2. 자주 사용되는 매개변수들
-- always_apply=(Boolean) : Default값은 False로 설정되있는데 딱히 신경안써도 된다.
-- p=(float) : 해당 augmentation option을 몇퍼센트의 확률로 적용할지 결정한다. (ex. p=0.5면 50%확률)
-- interpolation=(OpenCV flag) : cv2라이브러리에서 제공하는 보간법(interpolation)을 적용한다.
+- always_apply=(Boolean) : Default값은 False로 설정되있는데 딱히 신경안써도 됩니다.
+- p=(float) : 해당 augmentation option을 몇퍼센트의 확률로 적용할지 결정합니다. (ex. p=0.5면 50%확률)
+- interpolation=(OpenCV flag) : cv2라이브러리에서 제공하는 보간법(interpolation)을 적용합니다.
   - OpenCV flag=0 : cv2.INTER_NEAREST 적용
   - OpenCV flag=1 : cv2.INTER_LINEAR 적용
   - OpenCV flag=2 : cv2.INTER_CUBIC 적용
   - OpenCV flag=3 : cv2.INTER_AREA 적용
   - OpenCV flag=4 : cv2.INTER_LANCZOS4 적용
-- border_mode=(OpenCV flag) : cv2라이브러리에서 제공하는 외간법(extrapolation)을 적용한다
+- border_mode=(OpenCV flag) : cv2라이브러리에서 제공하는 외간법(extrapolation)을 적용합니다.
   - OpenCV flag=0 : cv2.BORDER_CONSTANT 적용
   - OpenCV flag=1 : cv2.BORDER_REPLICATE 적용 - 추천
   - OpenCV flag=2 : cv2.BORDER_REFLECT 적용
